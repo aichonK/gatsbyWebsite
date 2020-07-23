@@ -1,6 +1,7 @@
 require("dotenv").config({
-    path: `.env.${process.env.NODE_ENV}`,
-  }) 
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Aichon`,
@@ -8,6 +9,7 @@ module.exports = {
     author: `Aicha K. Ben Chaouacha `,
   },
   plugins: [
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -29,7 +31,8 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
-    }, {
+    },
+    {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: `http://localhost:1337`,
