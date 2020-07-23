@@ -62,7 +62,6 @@ const Header = ({ siteTitle }) => {
           </Link>
         ))}
       </div>
-      
       {/* <div className="flex">
       {" "}
       {Pages.map(({ name, url }) => (

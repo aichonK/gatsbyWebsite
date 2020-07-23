@@ -25,13 +25,11 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div className="min-h-screen relative">
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
-        <main>{children}</main>
-        <Footer author={data.site.siteMetadata.author} />
-      </div>
-    </>
+      <main className="mb-12">{children}</main>
+      <Footer author={data.site.siteMetadata.author} />
+    </div>
   )
 }
 

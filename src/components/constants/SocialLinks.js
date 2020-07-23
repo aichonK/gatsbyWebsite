@@ -6,26 +6,26 @@ const data = [
   {
     id: 1,
     icon: <FaTwitterSquare />,
-    url: "",
+    url: "https://twitter.com/AichaChaouacha",
   },
   {
     id: 2,
     icon: <FaLinkedin />,
-    url: "",
+    url: "https://www.linkedin.com/in/aicha-ben-chaouacha-1a9417152/",
   },
   {
     id: 3,
     icon: <FaFacebookSquare />,
-    url: "",
+    url: "https://www.facebook.com/aichabenchaoucha",
   },
 ]
 //styleClass in case we want to customise the component
 const SocialLinks = ({styleClass}) => {
      return (
-       <ul className={`social-links flex mt-2 ${styleClass ? styleClass : ""}`}>
+       <ul className={`social-links flex  ${styleClass ? styleClass : ""}`}>
          {data.map(link => (
            <li key={link.id} className="mr-2">
-             <a href={link.url}>
+             <a href={link.url} target="_blank">
                {link.icon}
              </a>
            </li>

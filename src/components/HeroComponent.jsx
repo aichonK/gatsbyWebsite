@@ -19,13 +19,15 @@ const HeroComponent = () => {
        <div className="flex">
          <div className="w-1/2 ">
            <h1 className="block">Hallo.</h1>
-           I'm Aicha Ben Chaouacha
-           A north african women 
-           based in Germany 
-           a full-stack developer  interested in business and building cool products
-           <button className="bg-red-200 text-white hover:bg-red-500 font-bold py-2 px-4 rounded block"> Say hey!</button>
+           I'm Aicha Ben Chaouacha A north african women based in Germany a
+           full-stack developer interested in business and building cool
+           products
+           <button className="bg-red-200 text-white hover:bg-red-500 font-bold py-2 px-4 rounded block">
+             {" "}
+             Say hey!
+           </button>
            <div>
-             <SocialLinks></SocialLinks>
+             <SocialLinks styleClass="mt-2"></SocialLinks>
            </div>
          </div>
          {/* <Img
