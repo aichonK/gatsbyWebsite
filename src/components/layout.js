@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative bg-gray-200">
       <Header siteTitle={data.site.siteMetadata.title} />
       <main className="mb-12">{children}</main>
       <Footer author={data.site.siteMetadata.author} />

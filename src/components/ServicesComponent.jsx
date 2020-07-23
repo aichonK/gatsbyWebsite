@@ -19,7 +19,7 @@ const ServicesComponent = () => {
   const servicesData = [
     {
       icon: (
-        <div class="flex justify-center">
+        <div className="flex justify-center">
           <FaDev />
         </div>
       ),
@@ -30,7 +30,7 @@ const ServicesComponent = () => {
     },
     {
       icon: (
-        <div class="flex justify-center">
+        <div className="flex justify-center">
           <GrUserManager />
         </div>
       ),
@@ -41,7 +41,7 @@ const ServicesComponent = () => {
     },
     {
       icon: (
-        <div class="flex justify-center">
+        <div className="flex justify-center">
           <FaDev />
         </div>
       ),
@@ -52,14 +52,13 @@ const ServicesComponent = () => {
     },
   ]
   return (
-    <div>
+    <div className="min-h-screen p-8">
       {/* <div class="flex justify-center py-3">
         <span>Services</span>
       </div> */}
-      <p class="text-center py-3 text-2xl">Services</p>
-      <div class="sm:flex">
+      <p className="text-center py-3 text-2xl">Services</p>
+      <div className="bg-gray-200  sm:flex items-center justify-center">
         {servicesData.map(service => {
-          console.log(service)
           return <ServiceCard key={service.id} {...service} />
         })}
       </div>

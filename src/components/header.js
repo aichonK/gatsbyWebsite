@@ -49,7 +49,7 @@ const Header = ({ siteTitle }) => {
         </button>
       </div>
       <div
-        class={`px-2 pb-4 sm:flex ${mobileMenuIsShown ? "block" : "hidden"}`}
+        className={`px-2 pb-4 sm:flex ${mobileMenuIsShown ? "block" : "hidden"}`}
       >
         {Pages.map(({ name, url }) => (
           <Link
