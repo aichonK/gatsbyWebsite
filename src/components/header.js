@@ -23,7 +23,7 @@ const Pages = [{
 const Header = ({ siteTitle }) => {
   const [mobileMenuIsShown, setMobileMenuIsShown] = useState(false)
   return (
-    <header className="bg-gray-800 sm:flex sm:justify-between sm:px-4 sm:py-2">
+    <header className="bg-red-700 sm:flex sm:justify-between sm:px-4 sm:py-2">
       <div className="flex item-center justify-between px-4 py-2 sm:p-0">
         <h2 style={{ margin: 0 }}>
           <Link
@@ -49,7 +49,9 @@ const Header = ({ siteTitle }) => {
         </button>
       </div>
       <div
-        className={`px-2 pb-4 sm:flex ${mobileMenuIsShown ? "block" : "hidden"}`}
+        className={`px-2 pb-4 sm:flex ${
+          mobileMenuIsShown ? "block" : "hidden"
+        }`}
       >
         {Pages.map(({ name, url }) => (
           <Link

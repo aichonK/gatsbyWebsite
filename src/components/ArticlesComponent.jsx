@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image" // to take image data and render it
 
 const ArticlesComponent = () => {
@@ -19,11 +19,16 @@ const ArticlesComponent = () => {
 export default ArticlesComponent
 
 const Article = ({ data }) => (
-  <div className="bg-white border rounded-lg overflow-hidden max-w-sm">
+  <Link
+    className="bg-white border rounded-lg overflow-hidden max-w-sm"
+    to={`/${data.id}`}
+  >
     <div className="overview-hidden">
       <Img class="w-full" fluid={data.image.childImageSharp.fluid} />
       <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+        <div class="font-bold text-xl mb-2">
+          {data.title}
+        </div>
         <p class="text-gray-700 text-base h-8 overflow-hidden">
           {data.content}
         </p>
@@ -40,7 +45,7 @@ const Article = ({ data }) => (
         </span>
       </div>
     </div>
-  </div>
+  </Link>
 )
 
  const pageQuery = graphql`
