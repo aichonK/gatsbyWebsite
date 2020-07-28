@@ -38,13 +38,13 @@ export const pageQuery = graphql ` query IndexQuery {
           id
           title
           content
-          image {
-            childImageSharp {
-              fixed(width: 200, height: 125) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
+          # image {
+          #   childImageSharp {
+          #     fixed(width: 200, height: 125) {
+          #       ...GatsbyImageSharpFixed
+          #     }
+          #   }
+          # }
         }
       }
     }

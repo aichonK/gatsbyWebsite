@@ -7,7 +7,7 @@ const ArticleTemplate = ({ data }) => (
   <Layout>
     <h1>{data.strapiArticle.title}</h1>
    
-    {data.strapiArticle.image&&<Img fluid={data.strapiArticle.image.childImageSharp.fluid} />}
+    {/* {data.strapiArticle.image&&<Img fluid={data.strapiArticle.image.childImageSharp.fluid} />} */}
     <p>{data.strapiArticle.content}</p>
   </Layout>
 )
@@ -22,13 +22,13 @@ export const query = graphql`
            strapiArticle(id: { eq: $id }) {
              title
              content
-             image {
-               childImageSharp {
-                 fluid(maxWidth: 960) {
-                   ...GatsbyImageSharpFluid
-                 }
-               }
-             }
+            #  image {
+            #    childImageSharp {
+            #      fluid(maxWidth: 960) {
+            #        ...GatsbyImageSharpFluid
+            #      }
+            #    }
+            #  }
            }
          }
        `

@@ -24,7 +24,7 @@ const Article = ({ data }) => (
     to={`/${data.id}`}
   >
     <div className="overview-hidden">
-      <Img class="w-full" fluid={data.image.childImageSharp.fluid} />
+      {/* <Img class="w-full" fluid={data.image.childImageSharp.fluid} /> */}
       <div class="px-6 py-4">
         <div class="font-bold text-xl mb-2">
           {data.title}
@@ -56,14 +56,13 @@ const Article = ({ data }) => (
            id
            title
            content
-           image {
-             
-             childImageSharp {
-               fluid(maxHeight: 205) {
-                 ...GatsbyImageSharpFluid
-               }
-             }
-           }
+          #  image {
+          #    childImageSharp {
+          #      fluid(maxHeight: 205) {
+          #        ...GatsbyImageSharpFluid
+          #      }
+          #    }
+          #  }
          }
        }
      }
