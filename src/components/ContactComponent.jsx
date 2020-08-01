@@ -6,7 +6,14 @@ const ContactComponent = () => {
       <div className="text-2xl text-purple-500 font-bold text-center ">
         Say Hey!
       </div>
-      <form>
+      <form
+        netlify-honeypot="bot-field"
+        data-netlify="true"
+        name="contact"
+        method="POST"
+      >
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="contact" />
         <div>
           <label
             htmlFor="name"
@@ -16,6 +23,7 @@ const ContactComponent = () => {
             Name
           </label>
           <input
+            name="name"
             type="text"
             className="shadow  border rounded w-full py-2 px-3 mt-1 text-gray-700 
             leading-tight focus:outline-none bg-white focus:shadow-outline"
@@ -29,6 +37,7 @@ const ContactComponent = () => {
             Email
           </label>
           <input
+            name="email"
             type="email"
             className="shadow  border rounded w-full py-2 px-3 mt-1 text-gray-700 
             leading-tight focus:outline-none bg-white focus:shadow-outline"
@@ -52,7 +61,7 @@ const ContactComponent = () => {
           <button
             class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline 
             focus:outline-none text-white font-bold py-2 px-4 w-full rounded"
-            type="button"
+            type="submit"
           >
             Send Message
           </button>
